@@ -5,7 +5,7 @@ import LinkedinIcon from "../../../public/linkedin-icon.svg";
 import Link from "next/link";
 import Image from "next/image";
 import { supabase } from "../lib/supabaseClient";
-import { message } from "antd";
+import Swal from "sweetalert2";
 
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
@@ -17,8 +17,11 @@ const EmailSection = () => {
         subject: e.target.elements.subject.value,
         message: e.target.elements.message.value,
       };
-      message.success("Message sent successfully!")
       setEmailSubmitted(true);
+      Swal.fire({
+        title: 'Message sent successfully!',
+        icon: "success"
+      })
       // const { data, error } = await supabase
       //   .from('contactus')
       //   .insert([formData])
