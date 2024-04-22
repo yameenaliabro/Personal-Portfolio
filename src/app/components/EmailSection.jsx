@@ -5,6 +5,7 @@ import LinkedinIcon from "../../../public/linkedin-icon.svg";
 import Link from "next/link";
 import Image from "next/image";
 import { supabase } from "../lib/supabaseClient";
+import { message } from "antd";
 
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
@@ -16,17 +17,17 @@ const EmailSection = () => {
         subject: e.target.elements.subject.value,
         message: e.target.elements.message.value,
       };
-      console.log("🚀 ~ handleSubmit ~ formData:", formData)
+      message.success("Message sent successfully!")
+      setEmailSubmitted(true);
+      // const { data, error } = await supabase
+      //   .from('contactus')
+      //   .insert([formData])
+      //   .select();
 
-      const { data, error } = await supabase
-        .from('contactus')
-        .insert([formData])
-        .select();
-
-      if (data) {
-        alert("Message sent successfully!");
-        setEmailSubmitted(true);
-      }
+      // if (data) {
+      //   alert("Message sent successfully!");
+      //   setEmailSubmitted(true);
+      // }
     } catch (error) {
       console.error("Error submitting form:", error);
     }
