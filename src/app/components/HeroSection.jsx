@@ -58,7 +58,7 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            As a dedicated MERN stack developer with 1 year of experience, I specialize in building dynamic web applications. Proficient in React.js for creating engaging user interfaces, Node.js and Express.js for server-side development, and MongoDB for efficient database solutions. I've successfully contributed to projects, demonstrating a commitment to delivering quality code. Eager to continue learning and contribute to innovative tech projects. Let's connect and explore opportunities to collaborate! 💻🌐 #MERNDeveloper #WebDev #TechEnthusiast
+            Hello, I'm Muhammad Yameen, a proficient Full Stack Developer with 2 years of hands-on experience in crafting robust and scalable web applications. Passionate about leveraging cutting-edge technologies to deliver innovative solutions, I thrive in dynamic environments where I can apply my expertise in both front-end and back-end development. With a keen eye for detail and a commitment to delivering high-quality code, I'm dedicated to driving project success and exceeding client expectations. Let's collaborate and turn your ideas into reality!
           </p>
           <div>
             <Link
